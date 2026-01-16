@@ -1,1 +1,108 @@
+# 🧠 ai-homelab-mistral-
 
+A home lab AI assistant powered by **Mistral** and **Open WebUI**, deployed in a secure local environment using Docker and VirtualBox.
+
+This project documents how to build, deploy, and run a containerized AI chatbot server locally — without relying on OpenAI, internet access, or cloud compute. It's designed for:
+- 📦 Local-first AI experimentation
+- 🔐 Self-hosted privacy
+- 🧪 Infrastructure-as-Code learning
+- 🛠️ Homelab builders & system integrators
+
+---
+
+## 📐 Architecture
+
+![alt text](image.png)
+
+> Mistral + Open WebUI run in a Docker container inside an Ubuntu-based VirtualBox VM. The host provides persistent storage, bridged networking, and CLI/GUI access. Optionally accessible to other local users (LAN).
+
+---
+
+## 🚀 Quick Deploy (with Docker)
+
+Clone the repo and run the deploy script:
+
+```bash
+git clone https://github.com/JarrandyR/ai-homelab-mistral-.git
+cd ai-homelab-mistral-
+bash scripts/deploy.sh
+
+
+Project Structure
+ai-homelab-mistral-/
+├── README.md                 # Project overview & guide
+├── architecture-diagram.png # High-level architecture visual
+├── scripts/
+│   └── deploy.sh             # Auto-deploy script (Docker-based)
+├── docs/
+│   ├── setup.md              # Step-by-step install + usage
+│   └── faq.md                # Optional: Troubleshooting & tips
+
+📋 Features
+
+✅ Fully offline capable (no cloud needed)
+
+🐳 Runs inside a secure Docker container
+
+🔐 Local network access with no exposed ports
+
+🧠 Mistral model integration (via Ollama backend)
+
+🧰 Web-based GUI with Open WebUI (localhost)
+
+📝 Easy-to-follow install steps for beginners
+
+⚙️ Auto-deploy script with volume persistence
+
+📄 Documentation
+File	Purpose
+scripts/deploy.sh
+	Spins up the Open WebUI container and maps volumes
+docs/setup.md
+	Step-by-step setup guide
+architecture-diagram.png
+	Visual system overview
+🛠 Requirements
+
+ Git (to clone repo)
+
+ Docker (latest version)
+
+ VirtualBox (if running inside VM)
+
+ Ubuntu 22.04 LTS recommended
+
+🙋 Why Use This?
+
+You want a local ChatGPT-like assistant that runs 100% offline.
+
+You're learning DevOps, infrastructure, Docker, or AI system integration.
+
+You’re building a home server stack with modular services.
+
+You’re into privacy-first tools with full control of the backend.
+
+🔐 Notes on Security
+
+Uses bridge networking by default to stay on local LAN.
+
+No ports exposed to the internet unless changed manually.
+
+You can add authentication via reverse proxy (NGINX, Traefik) — not included in this lab.
+
+👨‍💻 Author
+
+Jarrandy Richards
+📍 Winter Haven, FL
+📧 jarrandyr11@gmail.com
+
+✅ License
+
+MIT — Free to use, modify, and contribute.
+
+
+## 💬 Feedback or Questions?
+
+Open an issue or email me directly at `jarrandyr11@gmail.com`.
+
+If you find this useful, consider ⭐️ starring the repo or sharing it with others building private LLMs.
